@@ -22,4 +22,10 @@
             SELECT LAST_INSERT_ID() AS ID
         </selectKey>
     </insert>
+
+
+    <select id="listAll" resultType="org.yjw.demo.structure.dao.dataobject.UserDO">
+        SELECT *
+        FROM users
+    </select>
 </mapper>
