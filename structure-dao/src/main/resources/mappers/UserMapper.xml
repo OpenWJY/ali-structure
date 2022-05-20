@@ -3,6 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.yjw.demo.structure.dao.mapper.UserMapper">
+    <insert id="insert" parameterType="org.yjw.demo.structure.dao.dataobject.UserDO">
+        INSERT INTO users(name, age, dept_id) VALUES (#{name}, #{age}, #{deptId})
+        <selectKey resultType="java.lang.Long" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS ID
+        </selectKey>
+    </insert>
+
     <select id="getById" parameterType="long" resultType="org.yjw.demo.structure.dao.dataobject.UserDO">
         SELECT *, dept_id as deptId
         FROM users

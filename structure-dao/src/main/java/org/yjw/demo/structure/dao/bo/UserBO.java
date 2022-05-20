@@ -1,4 +1,4 @@
-package org.yjw.demo.structure.bo;
+package org.yjw.demo.structure.dao.bo;
 
 import lombok.Data;
 
