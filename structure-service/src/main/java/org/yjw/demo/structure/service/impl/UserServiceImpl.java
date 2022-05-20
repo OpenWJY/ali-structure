@@ -8,7 +8,7 @@ import org.yjw.demo.structure.dao.bo.UserBO;
 import org.yjw.demo.structure.dao.dataobject.UserDO;
 import org.yjw.demo.structure.dao.mapper.UserMapper;
 import org.yjw.demo.structure.dao.query.UserQuery;
-import org.yjw.demo.structure.manager.DeptManager;
+import org.yjw.demo.structure.manager.dao.DeptManager;
 import org.yjw.demo.structure.service.UserService;
 
 import java.util.List;

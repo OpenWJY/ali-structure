@@ -1,4 +1,4 @@
-package org.yjw.demo.structure.manager;
+package org.yjw.demo.structure.manager.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
