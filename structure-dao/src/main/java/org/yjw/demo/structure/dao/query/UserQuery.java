@@ -1,12 +1,13 @@
-package org.yjw.demo.structure.dao.dataobject;
+package org.yjw.demo.structure.dao.query;
 
 import lombok.Data;
 
 /**
- * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>
+ * @author yjw
+ * @date 2022/5/19
  */
 @Data
-public class UserDO {
+public class UserQuery {
     private Long id;
 
     private String name;

@@ -1,12 +1,13 @@
-package org.yjw.demo.structure.dao.dataobject;
+package org.yjw.demo.structure.bo;
 
 import lombok.Data;
 
 /**
- * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>
+ * @author yjw
+ * @date 2022/5/19
  */
 @Data
-public class UserDO {
+public class UserBO {
     private Long id;
 
     private String name;
@@ -14,4 +15,6 @@ public class UserDO {
     private Integer age;
 
     private Integer deptId;
+
+    private String deptName;
 }

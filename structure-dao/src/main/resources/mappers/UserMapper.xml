@@ -3,29 +3,25 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.yjw.demo.structure.dao.mapper.UserMapper">
-
-    <select id="getByName" parameterType="string" resultType="org.yjw.demo.structure.dao.dataobject.UserDO">
-        SELECT *
-        FROM users
-        WHERE name = #{value}
-    </select>
-
     <select id="getById" parameterType="long" resultType="org.yjw.demo.structure.dao.dataobject.UserDO">
-        SELECT *
+        SELECT *, dept_id as deptId
         FROM users
         WHERE id = #{value}
     </select>
 
-    <insert id="insert" parameterType="org.yjw.demo.structure.dao.dataobject.UserDO">
-        INSERT INTO users(name, age) VALUES (#{name}, #{age})
-        <selectKey resultType="java.lang.Long" keyProperty="id">
-            SELECT LAST_INSERT_ID() AS ID
-        </selectKey>
-    </insert>
-
-
-    <select id="listAll" resultType="org.yjw.demo.structure.dao.dataobject.UserDO">
-        SELECT *
-        FROM users
+    <select id="listUsers" resultType="org.yjw.demo.structure.dao.dataobject.UserDO"
+            parameterType="org.yjw.demo.structure.dao.query.UserQuery">
+        SELECT *,dept_id as deptId FROM users
+        <where>
+            <if test="query.getName() != null and query.getName() != ''">
+                and name = #{query.name}
+            </if>
+            <if test="query.getAge() != null and query.getAge() != 0">
+                and age = #{query.age}
+            </if>
+            <if test="query.getDeptId() != null and query.getDeptId() != 0">
+                and dept_id = #{query.deptId}
+            </if>
+        </where>
     </select>
 </mapper>

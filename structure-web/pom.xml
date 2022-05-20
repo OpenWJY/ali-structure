@@ -27,9 +27,10 @@
         </dependency>
         <dependency>
             <groupId>org.yjw.demo</groupId>
-            <artifactId>structure-dao</artifactId>
+            <artifactId>structure-service</artifactId>
             <version>${project.version}</version>
         </dependency>
+
 
     </dependencies>
 

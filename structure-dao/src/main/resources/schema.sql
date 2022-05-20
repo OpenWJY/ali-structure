@@ -3,7 +3,7 @@
 -- ----------------------------
 DROP TABLE IF EXISTS `users`;
 -- 创建一个表，指定了4个属性：id、年龄、身高、体重。最后指定了id是唯一不能重复的键值
-CREATE TABLE IF NOT EXISTS `users` (`id` integer NOT NULL, `name` varchar(20),  `age` integer, `dep_id` integer, PRIMARY  KEY(`id`));
+CREATE TABLE IF NOT EXISTS `users` (`id` integer NOT NULL, `name` varchar(20),  `age` integer, `dept_id` integer, PRIMARY  KEY(`id`));
 
 DROP TABLE IF EXISTS `dept`;
 CREATE TABLE IF NOT EXISTS `dept` (`id` integer NOT NULL, `name` varchar(20), PRIMARY  KEY(`id`));
